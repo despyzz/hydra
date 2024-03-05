@@ -1,0 +1,18 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.label {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(26px, 6vw,36px);
+  line-height: clamp(36px, calc(6vw + 10px), 46px);
+
+  @include media($desktop) {
+    text-align: start;
+  }
+
+  span {
+    font-weight: 300;
+  }
+}

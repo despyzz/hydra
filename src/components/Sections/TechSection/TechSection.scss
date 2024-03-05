@@ -1,0 +1,117 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.tech-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @include media($desktop) {
+      max-width: none;
+    }
+  }
+
+  .slider {
+    display: flex;
+
+    @include media($desktop) {
+      width: 100% !important;
+      transform: none !important;
+
+      justify-content: space-between;
+      gap: 11px;
+    }
+  }
+
+  .slider-slide {
+    margin: 0 9vw;
+    display: flex;
+    justify-content: center;
+
+    @include media($desktop) {
+      margin: 0;
+    }
+  }
+
+  .slider-btn-prev,
+  .slider-btn-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media($desktop) {
+      display: none;
+    }
+
+    &::after {
+      background-image: url("../../../images/ServicesSection/Button.svg");
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  .slider-btn-prev {
+    left: 5px;
+  }
+
+  .slider-btn-next {
+    right: 5px;
+  }
+}
+
+.tech-section__banner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  padding: 51px 0 45px;
+  border-radius: 60px;
+  .label {
+    z-index: 1;
+    text-align: center;
+    font-size: 16px;
+    span {
+      font-size: 24px;
+    }
+  }
+  @include media($desktop) {
+    padding: 108px 0 91px;
+    border-radius: 160px;
+
+    .label,
+    .label span {
+      font-size: clamp(26px, 6vw,36px);
+    }
+  }
+}
+
+.tech-section__banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tech-item {
+  width: 180px;
+  height: 180px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  position: relative;
+
+  & > * {
+    z-index: 1;
+  }
+
+  @include media($desktop) {
+    gap: 100px;
+  }
+
+  &__desktop-decoration {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    top: 30%;
+    left: -10%;
+    @include media($desktop) {
+      display: block;
+    }
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  .about-image-wrapper {
+    flex-shrink: 0;
+    margin: 0 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: solid 12px rgba(0, 0, 0, 0.13);
+    width: 100%;
+    max-width: 524px;
+    border-radius: clamp(120px, 40vw, 240px) clamp(50px, 18vw, 100px);
+    overflow: hidden;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include media($desktop) {
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 34px;
+
+    @include media($desktop) {
+      align-items: start;
+    }
+
+    .label {
+      display: none;
+
+      @include media($desktop) {
+        display: block;
+      }
+    }
+
+    .description-wrapper {
+      display: block;
+    }
+
+    .description {
+      max-width: 500px;
+
+      @include media($desktop) {
+        max-width: 652px;
+      }
+    }
+
+    .button {
+      width: fit-content;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.process-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+
+  @include media($desktop) {
+    gap: 100px;
+  }
+
+  & > * {
+    z-index: 1;
+  }
+
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @include media($desktop) {
+      max-width: none;
+    }
+  }
+
+  .slider {
+    display: flex;
+
+    @include media($desktop) {
+      width: 100% !important;
+      transform: none !important;
+
+      justify-content: space-between;
+      gap: 11px;
+    }
+  }
+
+  .slider-slide {
+    margin: 0 9vw;
+    display: flex;
+    justify-content: center;
+
+    @include media($desktop) {
+      margin: 0;
+    }
+  }
+
+  .slider-btn-prev,
+  .slider-btn-next {
+    cursor: pointer;
+    position: absolute;
+    top: 85%;
+    transform: translateY(-50%);
+
+    @include media($desktop) {
+      display: none;
+    }
+
+    &::after {
+      background-image: url("../../../images/ServicesSection/Button.svg");
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  .slider-btn-prev {
+    left: 5px;
+  }
+
+  .slider-btn-next {
+    right: 5px;
+  }
+}
+
+.process-item {
+  display: flex;
+  max-width: 250px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  &__number-border {
+    border: solid 14px rgba(0, 0, 0, 0.22);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+  }
+
+  &__number-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(251deg, #C0B7E8 12.87%, #8176AF 89.33%);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+  }
+
+  &__number {
+    color: #343045;
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+  &__label {
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+
+    @include media($desktop) {
+      text-align: start;
+    }
+
+    p {
+      max-width: 180px;
+    }
+
+    &-arrow {
+      height: fit-content;
+      margin-bottom: -5px;
+      display: none;
+
+      @include media($desktop) {
+        display: block;
+      }
+    }
+  }
+}
+
+.process-section-decoration {
+  position: absolute;
+  display: none;
+  top: 57%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 0;
+  
+  @include media($desktop) {
+    display: block;
+  }
+}

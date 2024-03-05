@@ -1,0 +1,50 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.socialize {
+  &-wrapper {
+    margin-top: 56px;
+  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  @include media($desktop) {
+    align-items: start;
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__icons {
+    &-wrapper {
+      margin-top: 29px;
+    }
+    display: flex;
+    gap: 20px;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__button {
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 47px;
+      width: 100%;
+
+      @include media($desktop) {
+        justify-content: start;
+      }
+    }
+    width: calc(100% - 60px);
+    max-width: 293px;
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.description-wrapper {
+  display: none;
+
+  @include media($desktop) {
+    display: block;
+  }
+}
+
+.description {
+  font-size: 12px;
+  line-height: 28px;
+  font-weight: 400;
+
+  @include media($desktop) {
+    font-size: 16px;
+  }
+}

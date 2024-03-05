@@ -1,0 +1,27 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/vars";
+
+.hero-wrapper {
+  margin-top: 48px;
+
+  @include media($desktop) {
+    margin-left: auto;
+    margin-top: 0;
+    grid-row: 1 / 4;
+    grid-column: 2;
+  }
+}
+
+.hero {
+  margin: 0 5px;
+  border-radius: 100px 100px 100px 240px;
+  border: solid 12px rgba(0, 0, 0, 0.13);
+  overflow: hidden;
+  max-width: 524px;
+
+  &-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

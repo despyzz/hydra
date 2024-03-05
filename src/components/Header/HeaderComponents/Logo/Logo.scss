@@ -1,0 +1,28 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  &__img {
+    width: 60px;
+    height: 60px;
+
+    @include media($tablet) {
+      width: 102px;
+      height: 102px;
+    }
+  }
+
+  &__label {
+    width: 46px;
+    height: 28px;
+
+    @include media($tablet) {
+      width: 76px;
+      height: 46px;
+    }
+  }
+}

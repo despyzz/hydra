@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+

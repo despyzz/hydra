@@ -1,0 +1,136 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/vars";
+
+.contacts__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  margin: 0 auto;
+
+  align-items: center;
+
+  @include media($desktop) {
+    margin: 0;
+  }
+
+  &-icon {
+    width: 60px;
+    height: 60px;
+    grid-column: 1;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-label {
+    display: none;
+    grid-column: 2;
+    font-size: 24px;
+    font-weight: 700;
+
+    @include media($desktop) {
+      display: block;
+    }
+  }
+
+  &-description {
+    grid-row: span 2;
+
+    font-size: 14px;
+    font-weight: 400;
+    grid-column: 2;
+
+    @include media($desktop) {
+      grid-row: 2;
+    }
+  }
+}
+
+.hero-section {
+  .slider-wrapper {
+    grid-row: 4;
+    grid-column: span 2;
+
+    max-width: 500px;
+    width: 100%;
+    background: rgb(33, 30, 46);
+    background: linear-gradient(90deg, rgba(33, 30, 46, 1) 0%, rgba(58, 52, 86, 1) 50%, rgba(33, 30, 46, 1) 100%);
+    border-radius: 90px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 53px;
+
+    @include media($desktop) {
+      max-width: none;
+      padding: 0 24px;
+    }
+  }
+
+  .slider {
+    @include media($desktop) {
+      width: 100% !important;
+      transform: none !important;
+    }
+  }
+
+  .slider-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 44px;
+    gap: 10px;
+    word-break: break-word;
+
+    @include media($desktop) {
+      padding: 30px 0;
+
+      &::after {
+        display: block;
+        content: " ";
+        height: 140%;
+        width: 1px;
+        background-color: rgba(192, 183, 232, 0.33);
+      }
+
+      &::before {
+        content: " ";
+      }
+
+      &:first-child::before,
+      &:last-child::after {
+        content: " ";
+        width: 0;
+        height: 0;
+      }
+    }
+
+  }
+
+  .slider-btn-prev,
+  .slider-btn-next {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media($desktop) {
+      display: none;
+    }
+  }
+
+  .slider-btn-prev {
+    left: 10px;
+  }
+
+  .slider-btn-next {
+    right: 10px;
+
+    img {
+      rotate: 180deg;
+    }
+  }
+}
+

@@ -1,0 +1,28 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.button {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  border-radius: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @include media($desktop) {
+    font-size: 12px;
+  }
+
+  &-light {
+    padding: 17px 37px 16px 38px;
+    color: #343045;
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+  }
+
+  &-dark {
+    padding: 17px 37px 16px 38px;
+    color: #fff;
+    border: #fff 2px solid;
+  }
+}

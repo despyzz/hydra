@@ -1,0 +1,34 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/vars";
+
+.title-wrapper {
+  margin-top: 30px;
+
+  @include media($desktop) {
+    margin-top: 48px;
+  }
+}
+
+.title {
+  &-row {
+    font-size: clamp(24px, 6vw ,40px);
+    font-weight: 700;
+    text-align: center;
+
+    @include media($desktop) {
+      text-align: start;
+    }
+
+    span {
+      font-size: clamp(28px, 7.2vw, 46px);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(92deg, #C0B7E8 -1.02%, #8176AF 36.25%);
+    }
+
+    &:first-child {
+      margin-bottom: 8px;
+    }
+  }
+}

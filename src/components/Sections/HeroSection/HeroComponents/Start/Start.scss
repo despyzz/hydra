@@ -1,0 +1,24 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/vars";
+
+.start-wrapper {
+  margin-top: 36px;
+
+  @include media($desktop) {
+    margin-top: 66px;
+  }
+}
+
+.start {
+  display: flex;
+  align-items: center;
+
+  &-arrow {
+    display: none;
+    margin-left: 11px;
+
+    @include media($desktop) {
+      display: block;
+    }
+  }
+}

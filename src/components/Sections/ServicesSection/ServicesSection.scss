@@ -1,0 +1,31 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  gap: 26px;
+
+  @include media($desktop) {
+    gap: 107px;
+  }
+
+  & > * {
+    z-index: 1;
+  }
+}
+
+.services-desktop-decoration {
+  position: absolute;
+  top: 30%;
+  left: -84px;
+  display: none;
+  z-index: 0;
+
+  @include media($desktop) {
+    display: block;
+  }
+}

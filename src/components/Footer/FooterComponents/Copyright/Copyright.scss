@@ -1,0 +1,30 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.copyright {
+  &-wrapper {
+    margin-top: 61px;
+    width: 100%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+
+  &::before {
+    content: " ";
+    display: block;
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(52, 48, 69, 1), rgba(192, 183, 232, 1), rgba(129, 118, 175, 1), rgba(52, 48, 69, 1));
+  }
+
+  &__item {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.82px;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  @include media($desktop) {
+    display: none;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    position: absolute;
+    top: 60px;
+    right: -10px;
+
+    background: #302C42;
+    padding: 24px;
+    border-radius: 24px;
+    border: #C0B7E8 2px solid;
+
+
+    @include media($tablet) {
+      top: 80px;
+    }
+  }
+
+  & .nav {
+    display: block;
+  }
+
+  & .buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+}

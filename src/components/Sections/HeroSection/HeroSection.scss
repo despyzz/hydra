@@ -1,0 +1,56 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @include media($desktop) {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .description-wrapper {
+    max-width: 450px;
+    margin-top: 36px;
+  }
+  & > * {
+    z-index: 1;
+  }
+
+  .decorations-desktop {
+    width: 70vw;
+    max-width: 740px;
+    height: 70vw;
+    max-height: 845px;
+    top: 25%;
+    left: 75%;
+    position: absolute;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+
+    @include media($desktop) {
+      display: block;
+    }
+  }
+
+  .decorations-mobile {
+    width: 140vw;
+    height: 120vw;
+    top: 27%;
+    left: 42%;
+    position: absolute;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+
+    @include media($desktop) {
+      display: none;
+    }
+  }
+}
+
+

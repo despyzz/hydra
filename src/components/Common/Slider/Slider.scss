@@ -1,0 +1,28 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+}
+
+.slider-slide {
+  flex: 1;
+}
+
+.slider-btn-prev::after,
+.slider-btn-next::after {
+  display: block;
+  content: " ";
+  background-image: url('../../../images/HeroSection/Chevron.svg');
+  width: 30px;
+  height: 30px;
+}
+
+.slider-btn-next::after {
+  rotate: 180deg;
+}

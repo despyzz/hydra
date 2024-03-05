@@ -1,0 +1,121 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/vars";
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 320px;
+
+  padding: 30px;
+  border-radius: 40px;
+  background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+
+  &__photo-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid rgba(14, 14, 14, 0.32);
+    overflow: hidden;
+
+    margin-bottom: 21px;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+
+    &::after {
+      display: block;
+      content: " ";
+      width: 154px;
+      height: 1px;
+      background-color: #C0B7E8;
+
+      margin-top: 17.5px;
+      margin-bottom: 21.5px;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    font-weight: 400;
+
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+.services-section {
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @include media($desktop) {
+      max-width: none;
+    }
+  }
+
+  .slider {
+    display: flex;
+
+    @include media($desktop) {
+      width: 100% !important;
+      transform: none !important;
+
+      justify-content: space-between;
+      gap: 11px;
+    }
+  }
+
+  .slider-slide {
+    margin: 0 9vw;
+    display: flex;
+    justify-content: center;
+
+    @include media($desktop) {
+      margin: 0;
+    }
+  }
+
+  .slider-btn-prev,
+  .slider-btn-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media($desktop) {
+      display: none;
+    }
+
+    &::after {
+      background-image: url("../../../../../images/ServicesSection/Button.svg");
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  .slider-btn-prev {
+    left: 5px;
+  }
+
+  .slider-btn-next {
+    right: 5px;
+  }
+}
